@@ -101,4 +101,8 @@ strong:hover {
     cursor: pointer;
 }
 
+.status {
+    color: red;
+    margin-right: 2px;
+}
 
