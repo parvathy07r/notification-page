@@ -1,19 +1,46 @@
 const sections = document.querySelectorAll(".content");
-const makAllAsRead = document.querySelector(".btn")
+const markAllAsRead = document.querySelector(".btn");
+let totalCount = 0;
+totalCount = addTotalCount();
+displayCount(totalCount);
 
-console.log(sections);
+function addTotalCount() {
+    const statuses = document.querySelectorAll(".status");
+    let count = 0;
+    statuses.forEach(function(status) {
+        if (status.textContent.trim() === "unread") {
+            count++;
+        }
+    });
+    return count;
+}
+
+
 sections.forEach(function(section) {
     section.addEventListener('click', function(event) {
-        const status = document.querySelector(".status");
-        status.remove();
+        const status = section.querySelector(".status");
+        if (status) {
+            status.remove();
+            totalCount = addTotalCount();
+            
+            displayCount(totalCount);
+        }
+        
     });
 });
 
-makAllAsRead.addEventListener('click', function(event) {
+markAllAsRead.addEventListener('click', function(event) {
     const statuses = document.querySelectorAll(".status");
     statuses.forEach(function(status) {
         status.remove();
-    })
     });
+    totalCount = addTotalCount();
+    totalCount=0;
+    displayCount(totalCount);
+});
 
+function displayCount(totalCount) {
+    const node = document.querySelector(".count")
+    node.textContent = `${totalCount}`
+}
 
