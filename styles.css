@@ -95,7 +95,7 @@ a:hover {
 
 .private:hover {
     background-color:hsl(211, 68%, 94%);
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
 }
 
