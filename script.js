@@ -8,7 +8,7 @@ function addTotalCount() {
     const statuses = document.querySelectorAll(".status");
     let count = 0;
     statuses.forEach(function(status) {
-        if (status.textContent.trim() === "unread") {
+        if (status) {
             count++;
         }
     });
