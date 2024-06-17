@@ -12,7 +12,7 @@ body {
 .wrapper {
     border: none;
     box-shadow: 2px 2px 2px 2px grey;
-    width: 600px;
+    width: 650px;
     padding: 16px;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .content {
-    background-color: hsl(205, 33%, 90%);
+    background-color: hsl(210, 60%, 98%);
     display: flex;
     column-gap: 20px;
     align-items: center;
@@ -54,7 +54,7 @@ button {
 }
 
 button:hover {
-    color: blue;
+    color: hsl(219, 85%, 26%);
 }
 
 p {
@@ -84,7 +84,7 @@ p {
 }
 
 a {
-    color: darkgrey;
+    color: darkgray;
     text-decoration: none;
 }
 
@@ -93,7 +93,7 @@ a:hover {
 }
 
 .private:hover {
-    background-color:hsl(219, 14%, 63%);
+    background-color:hsl(211, 68%, 94%);
     border: none;
     cursor: pointer;
 }
